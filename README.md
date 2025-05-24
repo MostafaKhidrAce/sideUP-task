@@ -1,54 +1,123 @@
-# React + TypeScript + Vite
+# 📦 Inventory Management Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern inventory management dashboard built with **React**, **TypeScript**, **Tailwind CSS**, **React Router**, **React Hook Form**, and **React Toastify**. Supports **dark/light mode**, **drag-and-drop**, and **local data persistence**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+✅ **Authentication**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Secure login with default credentials (`Username: sideup`, `Password: sideup`)
+- Authentication state persists across reloads
+- Logout button clears authentication and redirects to login
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+✅ **Inventory Management**
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- View, add, edit, and delete products
+- Drag and drop products between status columns (In Stock, Low Stock, Out of Stock)
+- Real-time product status updates
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+✅ **Filters and Search**
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+- Filter by category, supplier, or search term
+- Live updating of filtered products
+
+✅ **Dark/Light Mode**
+
+- Toggle between dark and light themes
+- Dark mode preference persists across sessions
+
+✅ **Import/Export Data**
+
+- Import products from a JSON file
+- Export current product list to JSON
+
+✅ **Beautiful UI/UX**
+
+- Fully responsive design with Tailwind CSS
+- Animated gradient background on the login page
+- React Toastify for elegant notifications
+
+---
+
+## 🛠️ Setup Instructions
+
+1️⃣ **Clone the Repository**
+
+```bash
+git clone https://github.com/your-username/inventory-dashboard.git
+cd inventory-dashboard
+2️⃣ Install Dependencies
+
+bash
+Copy
+Edit
+npm install
+3️⃣ Start the Development Server
+
+bash
+Copy
+Edit
+
+npm run dev
+
+4️⃣ Open in Browser
+
+Visit http://localhost:5173
+
+📦 Packages Used
+Package	Purpose
+react & react-dom	Core UI framework
+react-router-dom	Client-side routing
+react-hook-form	Form handling
+react-toastify	Toast notifications
+lucide-react	Icon library
+tailwindcss	Utility-first styling
+typescript	Type safety
+vite	Development server & build tool
+
+💻 Functionality Overview
+
+🔒 Authentication
+
+Secure login form with default credentials.
+
+Login state is stored in localStorage and persists across reloads.
+
+Logout button in the dashboard clears auth and redirects to login.
+
+🎨 Dark/Light Mode
+
+Toggle between themes with a button in the header.
+
+Preference is stored in localStorage and persists across sessions.
+
+📦 Product Management
+
+View product list grouped by stock status.
+
+Drag and drop products between status columns.
+
+Add/Edit/Delete products using React Hook Form.
+
+Import/export product data as JSON files.
+
+🔍 Filtering & Search
+
+Filter products by category and supplier.
+
+Search products by name.
+
+📈 Real-time Updates
+
+Live product status updates and animations when moving products.
+
+🖼️ Beautiful Design
+
+Animated gradient background on login.
+
+Responsive, clean layout with Tailwind CSS.
+
+Icons and UI components from lucide-react.
 ```
