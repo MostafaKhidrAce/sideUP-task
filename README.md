@@ -2,7 +2,7 @@
 
 A modern inventory management dashboard built with **React**, **TypeScript**, **Tailwind CSS**, **React Router**, **React Hook Form**, and **React Toastify**. Supports **dark/light mode**, **drag-and-drop**, and **local data persistence**.
 
----
+## 🌐 **[Live Demo](https://side-up-task.vercel.app/)**
 
 ## 🚀 Features
 
